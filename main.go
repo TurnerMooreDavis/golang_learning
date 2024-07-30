@@ -43,7 +43,8 @@ func main() {
 		fmt.Println(typeof) // Print type
 		fmt.Println()       // Print a blank line between users
 		for i := 0; i < typeof.NumField(); i++ {
-
+			field := typeof.Field(i)
+			fmt.Printf("Field Name: %s, Field Type: %s\n", field.Name, field.Type)
 		}
 	}
 }
